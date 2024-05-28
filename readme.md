@@ -6,5 +6,18 @@ toimipisteistä saamasi PDF-tiedostot Googlen kalenteriin.
 ## Ohjelman asentaminen
 
 Ohjelma löytyy yltä, release-kansiosta. Kopioi kaikki kansion sisältämät 
-tiedostot omalle tietokoneellesi johonkin kansioon. Sen jälkeen olet valmis 
-käyttämään ohjelmaa.
+tiedostot omalle tietokoneellesi johonkin kansioon.
+
+Ohjelma vaatii, että tietokoneella on Java asennettuna.
+
+### Java-koe
+
+Voit kokeilla, onko tietokoneellasi Java asennettuna.
+
+Sitä varten kansiossa on tiedosto nimeltä ``java_koe.bat``, jonka voit 
+käynnistää kaksoisnapsauttamalla. Jos ruudulle ilmestyvässä ikkunassa lukee
+ensimmäisellä rivillä ``java`` ja sen jälkeen numeroita, kaikki on valmista 
+ohjelman käyttämistä varten.
+
+Jos ruudulla komeilee virheilmoitus, tietokoneellasi ei luultavasti ole
+Javaa. Voit asentaa sen WWW-osoitteesta https://www.java.com/en/download/.
