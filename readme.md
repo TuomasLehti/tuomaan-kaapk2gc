@@ -7,8 +7,8 @@ Ohjelman uusin versio on tällä hetkellä 0.0.
 
 ## Ohjelman asentaminen
 
-Ohjelma löytyy yltä, release-kansiosta. Kopioi kaikki kansion sisältämät 
-tiedostot omalle tietokoneellesi johonkin kansioon.
+Ohjelma löytyy oikealta, Releases-kohdasta ja edelleen Assets-kohdasta. Lataa
+``tuomaan-kaapk2gc.zip`` omalle koneellesi ja pura se haluamaasi kansioon.
 
 Ohjelma vaatii, että tietokoneella on Java asennettuna.
 
