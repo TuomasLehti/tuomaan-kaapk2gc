@@ -6,7 +6,7 @@
 
   <groupId>fi.tuomaan.joukkoliikenne.sovellukset.kaapk2gc</groupId>
   <artifactId>tuomaan-kaapk2gc</artifactId>
-  <version>0.0</version>
+  <version>0.0-SNAPSHOT-240529</version>
 
   <name>tuomaan-kaapk2gc</name>
   <!-- FIXME change it to the project's website -->
