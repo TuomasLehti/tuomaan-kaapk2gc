@@ -19,6 +19,21 @@
   </properties>
 
   <dependencies>
+
+    <!-- Icalendar-toiminnot -->
+    <dependency>
+      <groupId>org.mnode.ical4j</groupId>
+      <artifactId>ical4j</artifactId>
+      <version>4.0.0-rc6</version>
+    </dependency>
+
+    <!-- Koiviston auton ajopäiväkirjat -->
+    <dependency>
+      <groupId>fi.tuomaan.joukkoliikenne.koivistonauto.ajopaivakirja</groupId>
+      <artifactId>tuomaan-ka-ajopaivakirja</artifactId>
+      <version>1.13</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
