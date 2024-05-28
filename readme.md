@@ -3,6 +3,8 @@
 Tällä ohjelmalla pystyt siirtämään Koiviston auton Helsingin ja Porvoon 
 toimipisteistä saamasi PDF-tiedostot Googlen kalenteriin.
 
+Ohjelman uusin versio on tällä hetkellä 0.0.
+
 ## Ohjelman asentaminen
 
 Ohjelma löytyy yltä, release-kansiosta. Kopioi kaikki kansion sisältämät 
@@ -21,3 +23,11 @@ ohjelman käyttämistä varten.
 
 Jos ruudulla komeilee virheilmoitus, tietokoneellasi ei luultavasti ole
 Javaa. Voit asentaa sen WWW-osoitteesta https://www.java.com/en/download/.
+
+## Ohjelman käyttäminen
+
+Ohjelman voi käynnistää release-kansiossa olevaa ``run.bat``-tiedostoa
+kaksoisnapsauttamalla.
+
+Ohjelma ei tällä hetkellä tee käytännössä mitään. Ruudulle ilmestyy 
+tervetulotoivotus.
