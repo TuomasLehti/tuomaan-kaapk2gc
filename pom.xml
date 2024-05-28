@@ -22,9 +22,9 @@
 
     <!-- Icalendar-toiminnot -->
     <dependency>
-      <groupId>org.mnode.ical4j</groupId>
-      <artifactId>ical4j</artifactId>
-      <version>4.0.0-rc6</version>
+      <groupId>net.sf.biweekly</groupId>
+      <artifactId>biweekly</artifactId>
+      <version>0.6.8</version>
     </dependency>
 
     <!-- Koiviston auton ajopäiväkirjat -->
