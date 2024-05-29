@@ -26,8 +26,31 @@ Javaa. Voit asentaa sen WWW-osoitteesta https://www.java.com/en/download/.
 
 ## Ohjelman käyttäminen
 
-Ohjelman voi käynnistää release-kansiossa olevaa ``run.bat``-tiedostoa
-kaksoisnapsauttamalla.
+- Kalenterin luominen vetämällä run.batin päälle.
+  - Erikoismerkit ja välilyönnit saattavat sekoittaa.
+  - Samaan kansioon ilmestyy ICS-tiedosto.
+  - Kannattaa säästää PDF-tiedostot, jotka haluaa säästää.
+- Kalenterin vieminen Google calendariin.
+  - Asetukset -> Tuo ja vie
+  - Kannattaa luoda oma kalenteri työvuoroille ainakin tässä vaiheessa, jotta
+    kaikki on tarvittaessa helppo poistaa, mikäli jokin menee pieleen.
+- Työpäivien muuttuminen
+  - Tee uudesta PDF:stä uusi ICS.
+  - Vie kalenteriin samaan tapaan kuin uusi työpäivä.
+  - Vanhan työpäivän joudut poistamaan käsityönä.
+  - Kannattaa ottaa muutoksista vain yksittäisen päivän PDF, jotta on helpompi
+    poistaa vanhat vain yhden päivän kohdalta.
 
-Ohjelma ei tällä hetkellä tee käytännössä mitään. Ruudulle ilmestyy 
-tervetulotoivotus.
+## Tulevaisuudensuunnitelmia
+
+- Tarjolle tullee kolme vaihtoehtoa:
+  - Niukka, joka muuttaa vain rupeaman alku- ja loppuajat.
+  - Normaali, joka muuttaa kaikki, jossa pitää itse ajaa.
+  - Runsas, joka muuttaa myös kaikki, jossa matkustetaan
+- Normaaliin ja runsaaseen tulee vaihtoehdoksi linja-ajopalojen muuttaminen
+  yksittäisiksi linjasivuiksi.
+
+Kun tämä kaikki perussälä on saatu jotakuinkin toimimaan tällä PC-ohjelmalla,
+alan miettiä, kuinka saisin sen pelaamaan ihan Windows-ikkunan kanssa ja
+mahdollisesti jopa kännykässä. Ohjelman rakenne on suunniteltu laajennettavuus
+mielessä.
