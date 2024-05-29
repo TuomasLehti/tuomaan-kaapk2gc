@@ -18,8 +18,6 @@ public class IcsAjopalaMuuttaja
 
     public static VEvent muuta(Ajopala ajopala)
     {
-        if (!muutetaanko(ajopala)) return null;
-
         VEvent event = new VEvent();
         event = muutaAjat(event, ajopala);
 
@@ -38,18 +36,6 @@ public class IcsAjopalaMuuttaja
             event = muutaKuvausSuunnaton(event, ajopala);
 
         return event;
-    }
-
-    private static Boolean muutetaanko(Ajopala ajopala)
-    {
-        List<AjopalanTyyppi> muutettavat = new ArrayList<>(Arrays.asList(new AjopalanTyyppi[]{
-            AjopalanTyyppi.LINJA_AJOA,
-            AjopalanTyyppi.SIIRTOAJO,
-            AjopalanTyyppi.SIIRTYMÄ_AUTOLLA,
-            AjopalanTyyppi.SISÄÄNAJO,
-            AjopalanTyyppi.ULOSAJO
-        }));
-        return muutettavat.contains(ajopala.tyyppi());
     }
 
     private static VEvent muutaAjat(VEvent event, Ajopala ajopala)
@@ -71,8 +57,8 @@ public class IcsAjopalaMuuttaja
     }
 
     private static VEvent muutaOtsikko(VEvent event, Ajopala ajopala) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'muutaOtsikko'");
+        event.setSummary(AjopalanTyyppi.asString(ajopala.tyyppi()));
+        return event;
     }
 
     private static VEvent muutaKuvaus(VEvent event, Ajopala ajopala) 
