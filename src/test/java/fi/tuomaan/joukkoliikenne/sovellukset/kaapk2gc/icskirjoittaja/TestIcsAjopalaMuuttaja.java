@@ -15,30 +15,68 @@ public class TestIcsAjopalaMuuttaja
 {
 
     @Test
-    public void test_Linjaajo()
+    public void test_Kuvaus_Linjaajo()
     {
-        final LocalDateTime ALOITUS_AIKA = LocalDateTime.of(2024,5,29,15,20);
-        final LocalDateTime LOPETUS_AIKA = LocalDateTime.of(2024,5,29,18,30);
-        final String ALOITUS_PAIKKA = "Tolkkinen";
-        final String LOPETUS_PAIKKA = "Hamari";
-        final String PO_PAIKAT = ALOITUS_PAIKKA + "–" + LOPETUS_PAIKKA;
+        final LocalDateTime ALOITUS_AIKA = LocalDateTime.of(2024,5,29,19,40);
+        final LocalDateTime LOPETUS_AIKA = LocalDateTime.of(2024,5,29,21,25);
+        final String ALOITUS_PAIKKA = "Porvoon tori";
+        final String LOPETUS_PAIKKA = "Porvoon sairaala";
+        final String SUUNTA = "s2";
+        final String PO_KUVAUS = ALOITUS_PAIKKA + " " + SUUNTA + "–" + LOPETUS_PAIKKA;
+        final String PO_OTSIKKO = "Linja-ajoa, vuoro 134, linja 1";
 
         Ajopala ajopala = new Ajopala(
             AjopalanTyyppi.LINJA_AJOA, 
             new AikaPaikka(
                 new Aika(ALOITUS_AIKA),
-                "Tolkkinen"
+                ALOITUS_PAIKKA
             ), 
             new AikaPaikka(
                 new Aika(LOPETUS_AIKA),
-                "Hamari"
-            )
+                LOPETUS_PAIKKA
+            ),
+            "1",
+            "134",
+            2
         );
         VEvent event = IcsAjopalaMuuttaja.muuta(ajopala);
 
         assertEquals(ALOITUS_AIKA, LocalDateTime.ofInstant(event.getDateStart().getValue().toInstant(), ZoneId.systemDefault()));
         assertEquals(LOPETUS_AIKA, LocalDateTime.ofInstant(event.getDateEnd().getValue().toInstant(), ZoneId.systemDefault()));
-        assertEquals(PO_PAIKAT, event.getDescription().getValue());
+        assertEquals(PO_KUVAUS, event.getDescription().getValue());
+        assertEquals(PO_OTSIKKO, event.getSummary().getValue());
+    }
+
+    @Test
+    public void test_Kuvaus_Linjaajo_Suunnaton()
+    {
+        final LocalDateTime ALOITUS_AIKA = LocalDateTime.of(2024,5,29,15,20);
+        final LocalDateTime LOPETUS_AIKA = LocalDateTime.of(2024,5,29,18,30);
+        final String ALOITUS_PAIKKA = "Tolkkinen";
+        final String LOPETUS_PAIKKA = "Hamari";
+        final String PO_KUVAUS = ALOITUS_PAIKKA + "–" + LOPETUS_PAIKKA;
+        final String PO_OTSIKKO = "Linja-ajoa, vuoro 134, linjat 1, 2";
+
+        Ajopala ajopala = new Ajopala(
+            AjopalanTyyppi.LINJA_AJOA, 
+            new AikaPaikka(
+                new Aika(ALOITUS_AIKA),
+                ALOITUS_PAIKKA
+            ), 
+            new AikaPaikka(
+                new Aika(LOPETUS_AIKA),
+                LOPETUS_PAIKKA
+            ),
+            "1, 2",
+            "134",
+            -1
+        );
+        VEvent event = IcsAjopalaMuuttaja.muuta(ajopala);
+
+        assertEquals(ALOITUS_AIKA, LocalDateTime.ofInstant(event.getDateStart().getValue().toInstant(), ZoneId.systemDefault()));
+        assertEquals(LOPETUS_AIKA, LocalDateTime.ofInstant(event.getDateEnd().getValue().toInstant(), ZoneId.systemDefault()));
+        assertEquals(PO_KUVAUS, event.getDescription().getValue());
+        assertEquals(PO_OTSIKKO, event.getSummary().getValue());
     }
     
 }
