@@ -16,7 +16,7 @@ extends IcsTestienPohja
     @Test
     public void testPorvoo()
     {
-        Ajopäiväkirja ajopäiväkirja = loadResource("fi/tuomaan/joukkoliikenne/sovellukset/kaapk2gc/icskirjoittaja/2024-05-29.pdf");
+        Ajopäiväkirja ajopäiväkirja = lataaAjopäiväkirja("fi/tuomaan/joukkoliikenne/sovellukset/kaapk2gc/icskirjoittaja/2024-05-29.pdf");
         List<VEvent> events = IcsTyöpäiväMuuttaja.muuta(ajopäiväkirja.työpäivä(LocalDate.of(2024, 5, 29)));
         assertEquals(6, events.size());
     }

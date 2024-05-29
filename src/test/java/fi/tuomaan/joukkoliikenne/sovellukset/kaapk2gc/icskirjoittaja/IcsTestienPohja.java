@@ -14,7 +14,7 @@ import fi.tuomaan.joukkoliikenne.koivistonauto.ajopaivakirja.PDFLukija.PDFAjopä
 public class IcsTestienPohja 
 {
     
-    protected Ajopäiväkirja loadResource(String name) {
+    protected Ajopäiväkirja lataaAjopäiväkirja(String name) {
     	ClassLoader classLoader = getClass().getClassLoader();
     	URL url = classLoader.getResource(name);
     	assertNotNull("URL is null", url);
