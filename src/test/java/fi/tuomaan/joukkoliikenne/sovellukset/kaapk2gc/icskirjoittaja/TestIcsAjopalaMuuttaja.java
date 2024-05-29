@@ -79,4 +79,37 @@ public class TestIcsAjopalaMuuttaja
         assertEquals(PO_OTSIKKO, event.getSummary().getValue());
     }
     
+    @Test
+    public void test_SiirtoajoLinjaautolla()
+    {
+        final LocalDateTime ALOITUS_AIKA = LocalDateTime.of(2024,5,29,15,8);
+        final LocalDateTime LOPETUS_AIKA = LocalDateTime.of(2024,5,29,18,20);
+        final String ALOITUS_PAIKKA = "Porvoo";
+        final String LOPETUS_PAIKKA = "Tolkkinen";
+        final String PO_KUVAUS = ALOITUS_PAIKKA + "–" + LOPETUS_PAIKKA;
+        final String PO_OTSIKKO = "Siirtoajo linja-autolla";
+
+        Ajopala ajopala = new Ajopala(
+            AjopalanTyyppi.SIIRTOAJO, 
+            new AikaPaikka(
+                new Aika(ALOITUS_AIKA),
+                ALOITUS_PAIKKA
+            ), 
+            new AikaPaikka(
+                new Aika(LOPETUS_AIKA),
+                LOPETUS_PAIKKA
+            ),
+            "1, 2",
+            "132",
+            -1
+        );
+        VEvent event = IcsAjopalaMuuttaja.muuta(ajopala);
+
+        assertEquals(ALOITUS_AIKA, LocalDateTime.ofInstant(event.getDateStart().getValue().toInstant(), ZoneId.systemDefault()));
+        assertEquals(LOPETUS_AIKA, LocalDateTime.ofInstant(event.getDateEnd().getValue().toInstant(), ZoneId.systemDefault()));
+        assertEquals(PO_KUVAUS, event.getDescription().getValue());
+        assertEquals(PO_OTSIKKO, event.getSummary().getValue());
+
+    }
+
 }
