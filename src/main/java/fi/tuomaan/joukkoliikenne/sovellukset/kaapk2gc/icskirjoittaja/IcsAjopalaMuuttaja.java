@@ -1,11 +1,7 @@
 package fi.tuomaan.joukkoliikenne.sovellukset.kaapk2gc.icskirjoittaja;
 
 import java.time.ZoneId;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
-
 import biweekly.component.VEvent;
 import fi.tuomaan.joukkoliikenne.koivistonauto.ajopaivakirja.Ajopala;
 import fi.tuomaan.joukkoliikenne.koivistonauto.ajopaivakirja.AjopalanTyyppi;
