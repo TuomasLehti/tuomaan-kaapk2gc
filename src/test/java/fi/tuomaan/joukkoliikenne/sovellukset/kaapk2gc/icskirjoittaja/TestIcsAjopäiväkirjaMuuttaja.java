@@ -18,7 +18,10 @@ extends IcsTestienPohja
     {
         Ajopäiväkirja ajopäiväkirja = lataaAjopäiväkirja("fi/tuomaan/joukkoliikenne/sovellukset/kaapk2gc/icskirjoittaja/2024-05-20.pdf");
         List<VEvent> eventList = IcsAjopäiväkirjaMuuttaja.muuta(ajopäiväkirja);
-        assertEquals(5, eventList.size());
+
+        /* Ajopäiväkirjassa on 5 työpäivää, jokaisessa 2 rupeamaa, joista 
+         * kummastakin tulee 3 ajopalaa. */
+        assertEquals(30, eventList.size());
     }
     
 }
