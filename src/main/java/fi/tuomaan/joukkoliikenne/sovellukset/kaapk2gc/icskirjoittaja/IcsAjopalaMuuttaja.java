@@ -59,7 +59,7 @@ public class IcsAjopalaMuuttaja
 
     private static VEvent muutaKuvaus(VEvent event, Ajopala ajopala) 
     {
-        event.setDescription(String.format(
+        event.setLocation(String.format(
             "%s s%d–%s", 
             ajopala.aloitus().paikka(),
             ajopala.suunta(),
@@ -70,7 +70,7 @@ public class IcsAjopalaMuuttaja
 
     private static VEvent muutaKuvausSuunnaton(VEvent event, Ajopala ajopala) 
     {
-        event.setDescription(String.format(
+        event.setLocation(String.format(
             "%s–%s", 
             ajopala.aloitus().paikka(),
             ajopala.lopetus().paikka()
