@@ -3,7 +3,7 @@
 Tällä ohjelmalla pystyt siirtämään Koiviston auton Helsingin ja Porvoon 
 toimipisteistä saamasi PDF-tiedostot Googlen kalenteriin.
 
-Ohjelman uusin versio on tällä hetkellä 0.0.
+Ohjelman uusin versio on tällä hetkellä 0.1.
 
 ## Ohjelman asentaminen
 
@@ -26,27 +26,36 @@ Javaa. Voit asentaa sen WWW-osoitteesta https://www.java.com/en/download/.
 
 ## Ohjelman käyttäminen
 
-- Kalenterin luominen vetämällä run.batin päälle.
-  - Erikoismerkit ja välilyönnit saattavat sekoittaa.
-  - Samaan kansioon ilmestyy ICS-tiedosto.
-  - Kannattaa säästää PDF-tiedostot, jotka haluaa säästää.
-- Kalenterin vieminen Google calendariin.
-  - Asetukset -> Tuo ja vie
-  - Kannattaa luoda oma kalenteri työvuoroille ainakin tässä vaiheessa, jotta
-    kaikki on tarvittaessa helppo poistaa, mikäli jokin menee pieleen.
-- Työpäivien muuttuminen
-  - Tee uudesta PDF:stä uusi ICS.
-  - Vie kalenteriin samaan tapaan kuin uusi työpäivä.
-  - Vanhan työpäivän joudut poistamaan käsityönä.
-  - Kannattaa ottaa muutoksista vain yksittäisen päivän PDF, jotta on helpompi
-    poistaa vanhat vain yhden päivän kohdalta.
+**Ohjelman käynnistämiseksi vedä ajopäiväkirja-PDF ``run.bat``-tiedoston 
+päälle.** Kansioon, josta vedit PDF:n, muodostuu tiedosto, jonka pääte on ICS.
+
+Ohjelma ei välttämättä löydä PDF-tiedostoa, jos tiedoston tai kansioiden 
+nimissä on välilyöntejä, å-, ä, tai ö-kjriamia, tai muita erikoismerkkejä.
+
+Kannattaa säästää PDF-tiedostot, joiden sisältämät työvuorot haluaa varmasti
+säästää.
+
+**Kalenteri tuodaan Google-kalenteriin asetusvalikon kautta.** Ylälaidasta 
+hammasrattaankuva -> asetukset. Sen jälkeen vasemmasta laidasta tuo ja vie.
+Sen jälkeen valitaan tiedosto tietokoneelta ja kalenteri, johon ajopäiväkirja
+lisätään. Lopuksi napsautetaan tietenkin Tuo-näppäintä.
+
+Kannattaa luoda oma kalenteri työvuoroille ainakin tässä vaiheessa, jotta
+kaikki on tarvittaessa helppo poistaa, mikäli jokin menee pieleen.
+
+**Jos työpäivä muuttuu**, siitä tehdään ICS-tiedosto ja se tuodaan Google-
+kalenteriin edellä kuvatulla tavalla, mutta vanha työpäivä pitää poistaa käsin.
+
+Kannattaa ottaa muutoksista vain yksittäisen päivän PDF, jotta on helpompi
+poistaa vanhat vain yhden päivän kohdalta.
 
 ## Tulevaisuudensuunnitelmia
 
-- Tarjolle tullee kolme vaihtoehtoa:
+- Tarjolle tullee neljä vaihtoehtoa:
   - Niukka, joka muuttaa vain rupeaman alku- ja loppuajat.
   - Normaali, joka muuttaa kaikki, jossa pitää itse ajaa.
   - Runsas, joka muuttaa myös kaikki, jossa matkustetaan
+  - Ylitsevuotava, joka muuttaa myös kaikki valmistelu- ja lopetteluajat.
 - Normaaliin ja runsaaseen tulee vaihtoehdoksi linja-ajopalojen muuttaminen
   yksittäisiksi linjasivuiksi.
 
